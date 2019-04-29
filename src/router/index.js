@@ -15,6 +15,7 @@ import ForgotPassword from '../views/pages/authentication/ForgotPassword.vue'
 import Profile from '../views/pages/Profile.vue'
 import NotFound from '../views/pages/NotFound.vue'
 import Invoice from '../views/pages/Invoice.vue'
+import ManageLoc from '../views/pages/capturer/ManageLoc.vue'
 
 //ui
 import Themes from '../views/ui/Themes.vue'
@@ -40,6 +41,17 @@ Vue.use(Router)
 const router = new Router({
 	mode: 'history',
 	routes: [
+		{
+			path: '/manageloc',
+			name: 'manageloc',
+			component: ManageLoc,
+			meta: {
+				auth: true,
+				layout: layouts.navLeft,
+				searchable: true,
+				tags: ['app']
+			}
+		},
 		{
 			path: '/',
 			alias: '/dashboard',

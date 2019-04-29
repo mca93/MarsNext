@@ -2,10 +2,10 @@
 	<vue-scroll class="login-page align-vertical">
 		<div class="form-wrapper align-vertical-middle">
 			<div class="form-box card-base card-shadow--extraLarge">
-				<img class="image-logo" src="@/assets/images/logo.svg" alt="logo"/>
+				<img class="image-logo" src="@/assets/images/logo.png" alt="logo"/>
 				
 				<float-label class="styled">
-					<input type="email" placeholder="E-mail">
+					<input type="text" placeholder="A number">
 				</float-label>
 				<float-label class="styled">
 					<input type="password" placeholder="Password">
@@ -20,21 +20,6 @@
 					<el-button plain size="small" @click="login" class="login-btn tada animated">
 						LOGIN
 					</el-button>
-				</div>
-
-				<div class="text-divider mv-10">or</div>
-
-				<div class="flex column center pt-10 pb-10">			
-					<el-button plain size="small" @click="login" class="social-btn google">
-						Log in with Google
-					</el-button>
-					<el-button plain size="small" @click="login" class="social-btn facebook">
-						Log in with Facebook
-					</el-button>
-				</div>
-
-				<div class="text-center signin-box pt-20">
-					Don't have an account? <a>Sign in</a>
 				</div>
 			</div>
 		</div>
