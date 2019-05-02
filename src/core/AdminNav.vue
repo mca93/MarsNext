@@ -16,7 +16,7 @@
 
     <el-menu-item index="/manageloc">
       <i class="mdi mdi-view-quilt"></i>
-      <span slot="title">Manage LOCs</span>
+      <span slot="title">Admin</span>
     </el-menu-item>
     <el-submenu index="layout" popper-class="main-navigation-submenu">
       <template slot="title">
