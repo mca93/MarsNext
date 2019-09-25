@@ -16,13 +16,13 @@
 								</div>
 							</div>
 							<div class="widget-info box grow text-truncate animated fadeInLeft">
-								<div class="o-050 widget-title text-truncate pt-5 pb-10">Users</div>
+								<div class="o-050 widget-title text-truncate pt-5 pb-10">White List</div>
 								<h2 class="m-0 text-truncate">4,523</h2>
 							</div>
 						</div>
 					</div>
 
-					<component :is="asyncComponent" :type="'line'" :options='{ width: "100%", height: 80 }' :data="[1, 3, 2, 4, 4, 9, 3, 4, 6, 5, 4, 6, 9, 8, 11, 12, 13, 12, 12, 14].toString()"/>
+					<component :is="asyncComponent" :type="'line'" :options='{ width: "100%", height: 80 }' :data="[1, 3, 2, 0, 0, 0, 3, 4, 6, 0, 0, 0, 9, 8, 11, 12, 13, 12, 12, 14].toString()"/>
 				</div>
 			</el-col>
 			<el-col :xs="24" :sm="12" :md="12" :lg="6" :xl="6">
@@ -37,7 +37,7 @@
 								</div>
 							</div>
 							<div class="widget-info box grow text-truncate animated fadeInLeft">
-								<div class="o-050 widget-title text-truncate pt-5 pb-10">Views</div>
+								<div class="o-050 widget-title text-truncate pt-5 pb-10">Notified</div>
 								<h2 class="m-0 text-truncate">2,523</h2>
 							</div>
 						</div>
@@ -58,7 +58,7 @@
 								</div>
 							</div>
 							<div class="widget-info box grow text-truncate animated fadeInLeft">
-								<div class="o-050 widget-title text-truncate pt-5 pb-10">Conversion</div>
+								<div class="o-050 widget-title text-truncate pt-5 pb-10">Dorments</div>
 								<h2 class="m-0 text-truncate">9,832</h2>
 							</div>
 						</div>
@@ -79,7 +79,7 @@
 								</div>
 							</div>
 							<div class="widget-info box grow text-truncate animated fadeInLeft">
-								<div class="o-050 widget-title text-truncate pt-5 pb-10">Revenue</div>
+								<div class="o-050 widget-title text-truncate pt-5 pb-10">Renewed</div>
 								<h2 class="m-0 text-truncate">6,364</h2>
 							</div>
 						</div>
@@ -88,66 +88,52 @@
 					<component :is="asyncComponent" :type="'bar'" :options='{ width: "100%", height: 80, fill: ["#56f19a"] }' :data="[6, 5, 4, 3, 5, 3, 4, 5, 6, 5, 4, 2, 3, 8, 7, 6, 5, 2, 1, 5].toString()"/>
 				</div>
 			</el-col>
-			<!--<el-col :xs="24" :sm="12" :md="8" :lg="4" :xl="4">
-				<div class="card-base card-shadow--medium mb-30 widget small-widget" v-loading="!asyncComponent">
-
-					<div class="widget-header ph-20 pt-20">
-						<div class="flex justify-center align-center">
-							<div class="widget-icon-box mr-20 animated fadeInRight">
-								<i class="widget-icon mdi mdi-message-text-outline danger-text fs-30"></i>
-								<div class="badge-box">
-									<span class="badge"><i class="mdi mdi-trending-down danger-text mr-10"></i><strong class="danger-text">23%</strong></span>
-								</div>
-							</div>
-							<div class="widget-info box grow text-truncate animated fadeInLeft">
-								<div class="o-050 widget-title text-truncate pt-5 pb-10">Messages</div>
-								<h2 class="m-0 text-truncate">52,628</h2>
-							</div>
-						</div>
-					</div>
-
-					<component :is="asyncComponent" :type="'line'" :options='{ width: "100%", height: 80, fill: "#EF5F8B", stroke: "#CF2256" }' :data="[9, 7, 5, 4, 4, 8, 3, 4, 6, 5, 4, 6, 5, 7, 3, 2, 4, 3, 2, 1].toString()"/>
-				</div>
-			</el-col>
-			<el-col :xs="24" :sm="12" :md="8" :lg="4" :xl="4">
-				<div class="card-base card-shadow--medium mb-30 widget small-widget" v-loading="!asyncComponent">
-
-					<div class="widget-header ph-20 pt-20">
-						<div class="flex justify-center align-center">
-							<div class="widget-icon-box mr-20 animated fadeInRight">
-								<i class="widget-icon mdi mdi-cart danger-text fs-30"></i>
-								<div class="badge-box">
-									<span class="badge"><i class="mdi mdi-trending-down danger-text mr-10"></i><strong class="danger-text">9%</strong></span>
-								</div>
-							</div>
-							<div class="widget-info box grow text-truncate animated fadeInLeft">
-								<div class="o-050 widget-title text-truncate pt-5 pb-10">Purchases</div>
-								<h2 class="m-0 text-truncate">3,346</h2>
-							</div>
-						</div>
-					</div>
-
-					<component :is="asyncComponent" :type="'bar'" :options='{ width: "100%", height: 80, fill: ["#EF5F8B"] }' :data="[1, 2, 3, 4, 5, 4, 3, 2, 1, 2, 3, 4, 5, 4, 3, 2, 1, 2, 3, 4].toString()"/>
-				</div>
-			</el-col>-->
 		</el-row>
 
 		<el-row class="mt-0" :gutter="30">
 			<el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
 				<div class="card-base card-shadow--medium bg-accent p-20" style="height:400px" v-loading="!asyncChart1">
-					<h1 class="white-text mv-0 animated fadeInDown">Statistics</h1>
-					<h3 class="mt-0 mb-40 white-text o-050 animated slideInUp">revenue</h3>
+					<h1 class="white-text mv-0 animated fadeInDown">Cards to Expire</h1>
+					<h3 class="mt-0 mb-40 white-text o-050 animated slideInUp">This Week</h3>
 					<div id="chart1" style="height:300px; width:100%"></div>
 				</div>
 			</el-col>
 		</el-row>
 
 		<el-row class="mt-30" :gutter="30">
+		
+		</el-row>
+
+		<el-row class="mt-0" :gutter="30">
+			<el-col :xs="24" :sm="12" :md="10" :lg="8" :xl="6">
+				<vue-scroll class="card-base card-shadow--medium p-20 mb-30" style="height:660px">
+					<h2 class="mv-0 animated fadeInDown">Cards Flow</h2>
+					<h4 class="mt-5 mb-40 animated slideInUp"><span class="o-050">Last activity:</span><strong class="ml-10 o-070">2 days ago</strong></h4>
+
+					<timeline timeline-theme="lightblue">
+						<timeline-title>Last checked: 12:30 am</timeline-title>
+						<timeline-item :hollow="true">
+							Lorem ipsum dolor sit amet conse ctetur which ascing elit users.
+						</timeline-item>
+						<timeline-item :hollow="true">
+							Donec dapibus molestie lacus ac pellentesque.
+						</timeline-item>
+						<timeline-title>3 days ago</timeline-title>
+						<timeline-item :hollow="true">
+							Mauris vitae posuere arcu. Donec porta ex sed hendrerit euismod.
+						</timeline-item>
+						<timeline-title>4 days ago</timeline-title>
+						<timeline-item :hollow="true">
+							Suspendisse faucibus sem a ex porta.
+						</timeline-item>
+					</timeline>
+				</vue-scroll>
+			</el-col>
 			<el-col :xs="24" :sm="12" :md="14" :lg="16" :xl="18">
 				<vue-scroll class="card-base card-shadow--medium mb-30" style="height:410px">
 					<div class="p-20 flex justify-space-between">
 						<div>
-							<h2 class="mv-0 animated fadeInDown">Progress</h2>
+							<h2 class="mv-0 animated fadeInDown">Cards Renewal</h2>
 							<h4 class="mt-5 mb-0 o-050 animated slideInUp">This month</h4>
 						</div>
 						<div class="radio-switcher">
@@ -162,9 +148,9 @@
 						<thead>
 							<tr>
 								<th></th>
-								<th style="min-width:85px;">First name</th>
-								<th style="min-width:80px;">Last name</th>
-								<th style="min-width:130px;">Activity</th>
+								<th style="min-width:85px;">Status</th>
+								<th style="min-width:80px;"></th>
+								<th style="min-width:130px;"></th>
 								<th style="min-width:195px;">Progress</th>
 							</tr>
 						</thead>
@@ -199,66 +185,10 @@
 						</tbody>
 					</table>
 				</vue-scroll>
-			</el-col>
-			<el-col :xs="24" :sm="12" :md="10" :lg="8" :xl="6">
-				<div class="card-base card-shadow--medium mb-30 bg-primary p-20" style="height:410px; box-sizing:border-box;" v-loading="!asyncChart2">
-					<div id="chart2" style="height:350px; width:80%; margin-left:10%"></div>
-				</div>
-			</el-col>
-		</el-row>
-
-		<el-row class="mt-0" :gutter="30">
-			<el-col :xs="24" :sm="12" :md="10" :lg="8" :xl="6">
-				<vue-scroll class="card-base card-shadow--medium p-20 mb-30" style="height:660px">
-					<h2 class="mv-0 animated fadeInDown">Activities</h2>
-					<h4 class="mt-5 mb-40 animated slideInUp"><span class="o-050">Last activity:</span><strong class="ml-10 o-070">2 days ago</strong></h4>
-
-					<timeline timeline-theme="lightblue">
-						<timeline-title>2 days ago</timeline-title>
-						<timeline-item :hollow="true">
-							Lorem ipsum dolor sit amet conse ctetur which ascing elit users.
-						</timeline-item>
-						<timeline-item :hollow="true">
-							Donec dapibus molestie lacus ac pellentesque.
-						</timeline-item>
-						<timeline-title>3 days ago</timeline-title>
-						<timeline-item :hollow="true">
-							Mauris vitae posuere arcu. Donec porta ex sed hendrerit euismod.
-						</timeline-item>
-						<timeline-title>4 days ago</timeline-title>
-						<timeline-item :hollow="true">
-							Suspendisse faucibus sem a ex porta.
-						</timeline-item>
-					</timeline>
-				</vue-scroll>
-			</el-col>
-			<el-col :xs="24" :sm="12" :md="14" :lg="16" :xl="18">
-				<div class="card-base card-shadow--medium p-20 mb-30" style="height:295px">
-					<div class="flex justify-space-between">
-						<div>
-							<h2 class="mv-0 animated fadeInDown">Report</h2>
-							<h4 class="mt-5 mb-40 o-050 animated slideInUp">This week</h4>
-						</div>
-						<div class="radio-switcher">
-							<el-radio-group v-model="radio2">
-								<el-radio-button label="Day"></el-radio-button>
-								<el-radio-button label="Week"></el-radio-button>
-								<el-radio-button label="Month"></el-radio-button>
-							</el-radio-group>
-						</div>
-					</div>
-
-					<h4 class="mb-0 mt-0">New Users</h4>
-					<el-progress :percentage="100" status="success"></el-progress>
-					<h4 class="mb-0">Views</h4>
-					<el-progress :percentage="70"></el-progress>
-					<h4 class="mb-0">Conversions</h4>
-					<el-progress :percentage="20" status="exception"></el-progress>
-				</div>
 
 				<div class="card-base card-shadow--medium flex column mb-30 pv-20 bg-primary" style="height:295px;">
 					<div class="ph-20">
-						<h2 class="white-text mv-0 animated fadeInDown">Visitors</h2>
+						<h2 class="white-text mv-0 animated fadeInDown">Year Summary</h2>
 						<h4 class="white-text mt-5 mb-0 o-050 animated slideInUp">Jan - Jul</h4>
 					</div>
 					<div class="box grow ph-20">
@@ -288,16 +218,10 @@ export default {
 			chart2: null,
 			resized: false,
 			list: [
-				{"activity":111, "progress": 70, "status":"active", "id":1,"first_name":"Fidela","last_name":"MacLaverty","email":"fmaclaverty0@scribd.com","gender":"Female","ip_address":"165.9.197.163"},
-				{"activity":111, "progress": 55, "status":"intermediary", "id":2,"first_name":"Garrard","last_name":"Inge","email":"ginge1@51.la","gender":"Male","ip_address":"138.87.225.97"},
-				{"activity":111, "progress": 100, "status":"positive", "id":3,"first_name":"Clayborn","last_name":"Blencoe","email":"cblencoe2@cbc.ca","gender":"Male","ip_address":"237.146.154.222"},
-				{"activity":111, "progress": 12, "status":"negative", "id":6,"first_name":"Elna","last_name":"Deboick","email":"edeboick5@4shared.com","gender":"Female","ip_address":"53.209.210.199"},
-				{"activity":111, "progress": 0, "status":"", "id":8,"first_name":"Sheffie","last_name":"Fellgett","email":"sfellgett7@ow.ly","gender":"Male","ip_address":"219.29.191.217"},
-				//{"activity":111, "progress": 68, "status":"active", "id":4,"first_name":"Reinaldos","last_name":"Briiginshaw","email":"rbriiginshaw3@mashable.com","gender":"Male","ip_address":"35.148.222.21"},
-				//{"activity":111, "progress": 43, "status":"intermediary", "id":5,"first_name":"Abigael","last_name":"Richmond","email":"arichmond4@shinystat.com","gender":"Female","ip_address":"135.221.192.85"},
-				//{"activity":111, "progress": 100, "status":"positive", "id":7,"first_name":"Lanna","last_name":"Prentice","email":"lprentice6@oracle.com","gender":"Female","ip_address":"198.34.29.215"},
-				//{"activity":111, "progress": 88, "status":"active", "id":9,"first_name":"Mamie","last_name":"Calkin","email":"mcalkin8@oakley.com","gender":"Female","ip_address":"69.0.235.44"},
-				//{"activity":111, "progress": 9, "status":"negative", "id":10,"first_name":"Saudra","last_name":"Dunniom","email":"sdunniom9@ameblo.jp","gender":"Female","ip_address":"182.157.218.101"}
+				{"activity":111, "progress": 70, "status":"active", "id":1,"first_name":"Notified","":"","email":"fmaclaverty0@scribd.com","gender":"Female","ip_address":"165.9.197.163"},
+				{"activity":111, "progress": 55, "status":"intermediary", "id":2,"first_name":"WhiteListed","last_name":"","email":"ginge1@51.la","gender":"Male","ip_address":"138.87.225.97"},
+				{"activity":111, "progress": 100, "status":"positive", "id":3,"first_name":"Cards to Renew","last_name":"","email":"cblencoe2@cbc.ca","gender":"Male","ip_address":"237.146.154.222"},
+				{"activity":111, "progress": 12, "status":"negative", "id":6,"first_name":"Dorment","last_name":"","email":"edeboick5@4shared.com","gender":"Female","ip_address":"53.209.210.199"},
 			],
 			radio1: 'Month',
 			radio2: 'Week',
@@ -486,26 +410,6 @@ export default {
 						},
 						data: barData
 					},
-					/* {
-						name: 'line',
-						type: 'bar',
-						barGap: '-100%',
-						barWidth: 10,
-						itemStyle: {
-							normal: {
-								color: new echarts.graphic.LinearGradient(
-									0, 0, 0, 1,
-									[
-										{offset: 0, color: 'rgba(20,200,212,0.5)'},
-										{offset: 0.2, color: 'rgba(20,200,212,0.2)'},
-										{offset: 1, color: 'rgba(20,200,212,0)'}
-									]
-								)
-							}
-						},
-						z: -12,
-						data: lineData
-					},*/ 
 					{
 						name: 'Data C',
 						type: 'pictorialBar',

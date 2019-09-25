@@ -1,5 +1,5 @@
 <template>
-  <div>LOC's Details</div>
+  <div>Card's Details</div>
 </template>
 
 <script>

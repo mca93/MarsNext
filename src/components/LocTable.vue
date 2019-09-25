@@ -9,11 +9,11 @@
     :pagination-info="paginationInfo"
     :shown-pagination="true"
   >
-    <v2-table-column label="Customer's Name" prop="name" width="300" fixed="left"></v2-table-column>
-    <v2-table-column label="LOC Reference" prop="LocRef" width="150"></v2-table-column>
-    <v2-table-column label="Submitted date" prop="birthDay" width="150"></v2-table-column>
-    <v2-table-column label="Regime" prop="regime" width="150"></v2-table-column>
-    <v2-table-column label="LOC Status" prop="locStatus" width="150"></v2-table-column>
+    <v2-table-column label="Customer's Number" prop="name" width="300" fixed="left"></v2-table-column>
+    <v2-table-column label="Customer's Name" prop="LocRef" width="150"></v2-table-column>
+    <v2-table-column label="Card Number" prop="birthDay" width="150"></v2-table-column>
+    <v2-table-column label="Card Calor" prop="regime" width="150"></v2-table-column>
+    <v2-table-column label="Expire on" prop="locStatus" width="150"></v2-table-column>
     <v2-table-column label="Actions" width="300" fixed="right">
       <template slot-scope="scope">
         <router-link
